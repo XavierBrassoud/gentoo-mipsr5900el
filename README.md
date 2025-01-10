@@ -14,4 +14,4 @@ QEMU/R5900 is statically linked, to be easy to install with
 Gentoo with `rc-update add qemu-mipsr5900el-binfmt`. Programs intended for
 initramfs, such as Busybox and Dropbear, are also statically linked.
 
-A Docker image is built as a package at Github.
+A Docker image is built at Github, to be used in other Github repo workflows.
