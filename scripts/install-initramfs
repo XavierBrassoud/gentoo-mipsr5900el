@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p initramfs/{lib/firmware/ps2,bin,dev,etc,mnt,proc,root,sbin,sys,tmp,usr,usr/bin,usr/sbin,var}
+mkdir -p initramfs/{lib/firmware/ps2,bin,dev,etc,mnt,proc,root,sbin,sys,tmp,usr,usr/bin,usr/sbin,var/log}
 
 cp /usr/mipsr5900el-unknown-linux-musl/bin/busybox initramfs/bin/
 
