@@ -6,11 +6,17 @@ modprobe ps2fb mode_option=1920x1080p@60
 
 modprobe sif
 modprobe iop-memory
+modprobe iop-heap
 modprobe iop-module
 modprobe iop-irq
+modprobe iop-dev9
+modprobe iop-registers
 
-modprobe sd_mod
-modprobe ohci-ps2
-modprobe ums-usbat
+modprobe usb-common
+modprobe usbcore
+modprobe hid
 modprobe usbhid
 modprobe hid-generic
+modprobe ums-usbat
+modprobe sd_mod
+modprobe ohci-ps2
