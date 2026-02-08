@@ -1,13 +1,12 @@
 #!/bin/busybox sh
 
+unset HOME
+unset TERM
+
 /bin/busybox --install -s
-ln -s /bin/busybox /sbin/init
 
 /bin/mount -t devtmpfs devtmpfs /dev
+ln -s /proc/self/fd /dev/fd
 /bin/mkdir /dev/pts
-
-exec 0</dev/console
-exec 1>/dev/console
-exec 2>/dev/console
 
 exec /sbin/init $*

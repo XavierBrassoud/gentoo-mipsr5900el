@@ -52,18 +52,15 @@
 # this yourself...
 #
 # Start an "respawn" shell on the console (whatever that may be)
-::respawn:-/bin/sh
-# Start an "respawn" shell on /dev/tty2-4
-tty2::respawn:-/bin/sh
-tty3::respawn:-/bin/sh
-tty4::respawn:-/bin/sh
-
+# ::respawn:-/bin/sh
 # /sbin/getty invocations for selected ttys
-tty4::respawn:/sbin/getty 38400 tty4
-tty5::respawn:/sbin/getty 38400 tty5
+tty1::respawn:/sbin/getty -n -l /bin/autologin 38400 tty1 linux
+tty2::respawn:/sbin/getty -n -l /bin/autologin 38400 tty2 linux
+tty3::respawn:/sbin/getty -n -l /bin/autologin 38400 tty3 linux
+tty4::respawn:/sbin/getty -n -l /bin/autologin 38400 tty4 linux
 
 # Example of how to put a getty on a serial line (for a terminal)
-::respawn:/sbin/getty -L ttyS0 38400 vt100
+::respawn:/sbin/getty -n -l /bin/autologin -L ttyS0 38400 vt100
 #::respawn:/sbin/getty -L ttyS1 9600 vt100
 #
 # Example how to put a getty on a modem line.
