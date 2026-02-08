@@ -1,8 +1,5 @@
 #!/bin/sh
 
-PATH=/usr/sbin:/usr/bin:/sbin:/bin
-export PATH
-
 mount -t sysfs none /sys
 mount -t tmpfs none /var
 mount -t tmpfs none /tmp
@@ -25,9 +22,3 @@ modprobe ohci-ps2
 modprobe ums-usbat
 modprobe usbhid
 modprobe hid-generic
-
-# Blinking block cursor for more visibility.
-echo -e "\e[?6c"
-
-grep machine </proc/cpuinfo | sed 's/[[:space:]]\+//'
-uname -a

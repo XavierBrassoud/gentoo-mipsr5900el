@@ -1,0 +1,7 @@
+export PATH=/usr/sbin:/usr/bin:/sbin:/bin
+
+# Blinking block cursor for more visibility.
+echo -e "\e[?6c"
+
+grep machine </proc/cpuinfo | sed 's/[[:space:]]\+//'
+uname -a
