@@ -1,12 +1,3 @@
-# /etc/inittab init(8) configuration for BusyBox
-#
-# Copyright (C) 1999-2004 by Erik Andersen <andersen@codepoet.org>
-#
-#
-# Note, BusyBox init doesn't support runlevels.  The runlevels field is
-# completely ignored by BusyBox init. If you want runlevels, use sysvinit.
-#
-#
 # Format for each entry: <id>:<runlevels>:<action>:<process>
 #
 # <id>: WARNING: This field has a non-traditional meaning for BusyBox init!
@@ -46,7 +37,8 @@
 #
 # Boot-time system configuration/initialization script.
 # This is run first except when booting in single-user mode.
-#
+
+::sysinit:/bin/mount -a
 ::sysinit:/etc/init.d/rcS
 
 # /bin/sh invocations on selected ttys
